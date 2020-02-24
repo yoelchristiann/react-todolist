@@ -10,24 +10,81 @@
       rel="stylesheet"
     />
 
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <!-- sebagai library -->
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <!-- sebagai transpiler/compiler yang bisa membuat di implement ke dom -->
+    <script src="https://unpkg.com/babel-standalone06.26.0/babel.js"></script>
+    <!-- sebagai menstandarisasikan code javascript menjadi es5 supaya dapat dibaca di berbagai browser dengan tingkat yang tinggi -->
     <title>Static Template</title>
   </head>
   <body>
-    <div class="container">
-      <div class="frame">
-        <section class="header">
-          <button class="header-button">Add</button>
-          <h1 class="header-title">Todo Lists</h1>
-          <button class="header-button main-red-color">Clear</button>
-        </section>
+    <div id="root"></div>
+    <!-- sebagai tempat untuk React Component berada -->
 
-        <section class="add">
-          <form action="add-form">
-            <input type="text" class="add-input" />
-            <button class="add-button">Add</button>
-          </form>
-        </section>
-      </div>
-    </div>
+    <script type="text/babel">
+      class App extends React.Component {
+        render() {
+          return (
+            <div class="container">
+              <div class="frame">
+                <section class="header">
+                  <button class="header-button main-black-color ">Add</button>
+                  <h1 class="header-title">Todo Lists</h1>
+                  <button class="header-button main-red-color">Clear</button>
+                </section>
+
+                <section class="add">
+                  <form action="add-form">
+                    <input type="text" class="add-input" />
+                    <button class="add-button main-black-color">Add</button>
+                  </form>
+                </section>
+
+                <section class="todos">
+                  <div class="todo">
+                    <span class="todo-text">Learning React</span>
+                  </div>
+                  <div class="todo">
+                    <span class="todo-text">Learning React</span>
+                  </div>
+                  <div class="todo">
+                    <span class="todo-text">Learning React</span>
+                  </div>
+                  <div class="todo">
+                    <span class="todo-text">Learning React</span>
+                  </div>
+                  <div class="todo">
+                    <span class="todo-text">Learning React</span>
+                  </div>
+                  <div class="todo">
+                    <span class="todo-text">Learning React</span>
+                  </div>
+                  <div class="todo">
+                    <span class="todo-text">Learning React</span>
+                  </div>
+                  <div class="todo">
+                    <span class="todo-text">Learning React</span>
+                  </div>
+                  <div class="todo">
+                    <span class="todo-text">Learning React</span>
+                  </div>
+                  <div class="todo">
+                    <span class="todo-text">Learning React</span>
+                  </div>
+                  <div class="todo">
+                    <span class="todo-text">Learning React</span>
+                  </div>
+                  <div class="todo">
+                    <span class="todo-text">Learning React</span>
+                  </div>
+                </section>
+              </div>
+            </div>
+          );
+        }
+      }
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
   </body>
 </html>
